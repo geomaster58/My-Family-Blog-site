@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cody And Amandas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Header</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cody_and_amandas.each do |cody_and_amanda| %>
+      <tr>
+        <td><%= cody_and_amanda.header %></td>
+        <td><%= cody_and_amanda.body %></td>
+        <td><%= link_to 'Show', cody_and_amanda %></td>
+        <td><%= link_to 'Edit', edit_cody_and_amanda_path(cody_and_amanda) %></td>
+        <td><%= link_to 'Destroy', cody_and_amanda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cody And Amanda', new_cody_and_amanda_path %>

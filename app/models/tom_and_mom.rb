@@ -1,0 +1,2 @@
+class TomAndMom < ApplicationRecord
+end

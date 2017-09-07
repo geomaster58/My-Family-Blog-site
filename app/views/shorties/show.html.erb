@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Header:</strong>
+  <%= @shorty.header %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @shorty.body %>
+</p>
+
+<%= link_to 'Edit', edit_shorty_path(@shorty) %> |
+<%= link_to 'Back', shorties_path %>

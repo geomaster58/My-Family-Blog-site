@@ -1,0 +1,27 @@
+<%= form_with(model: jj, local: true) do |form| %>
+  <% if jj.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(jj.errors.count, "error") %> prohibited this jj from being saved:</h2>
+
+      <ul>
+      <% jj.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :header %>
+    <%= form.text_field :header, id: :jj_header %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :jj_body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

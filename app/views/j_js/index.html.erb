@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Jjs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Header</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jjs.each do |jj| %>
+      <tr>
+        <td><%= jj.header %></td>
+        <td><%= jj.body %></td>
+        <td><%= link_to 'Show', jj %></td>
+        <td><%= link_to 'Edit', edit_jj_path(jj) %></td>
+        <td><%= link_to 'Destroy', jj, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jj', new_jj_path %>

@@ -1,0 +1,27 @@
+<%= form_with(model: david_and_naomi, local: true) do |form| %>
+  <% if david_and_naomi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(david_and_naomi.errors.count, "error") %> prohibited this david_and_naomi from being saved:</h2>
+
+      <ul>
+      <% david_and_naomi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :header %>
+    <%= form.text_field :header, id: :david_and_naomi_header %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :david_and_naomi_body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

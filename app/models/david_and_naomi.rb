@@ -1,0 +1,2 @@
+class DavidAndNaomi < ApplicationRecord
+end
